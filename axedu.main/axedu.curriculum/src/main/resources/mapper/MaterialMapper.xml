@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.MaterialMapper">
+
+    <select id="getMaterialById" resultType="com.zb.pojo.Material">
+        select
+                id as id,
+                gradeid as gradeid,
+                subjectid as subjectid,
+                createtime as createtime,
+                fileUrl as fileUrl
+        from material
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getMaterialListByMap" resultType="com.zb.pojo.Material" parameterType="java.util.Map">
+        select
+                id as id,
+                gradeid as gradeid,
+                subjectid as subjectid,
+                createtime as createtime,
+                fileUrl as fileUrl
+        from material
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="gradeid != null and gradeid!=''">
+                    and gradeid=#{gradeid}
+                </if>
+                <if test="subjectid != null and subjectid!=''">
+                    and subjectid=#{subjectid}
+                </if>
+
+                    and createtime=now()
+                <if test="fileUrl != null and fileUrl!=''">
+                    and fileUrl=#{fileUrl}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getMaterialCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from material
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="gradeid != null and gradeid!=''">
+                    and gradeid=#{gradeid}
+                </if>
+                <if test="subjectid != null and subjectid!=''">
+                    and subjectid=#{subjectid}
+                </if>
+                    and createtime=now()
+
+                <if test="fileUrl != null and fileUrl!=''">
+                    and fileUrl=#{fileUrl}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertMaterial" parameterType="com.zb.pojo.Material">
+        insert into material(
+                        gradeid,
+                        subjectid,
+                        createtime,
+                        fileUrl)
+        values(
+                     #{gradeid},
+                     #{subjectid},
+                     now(),
+                    #{fileUrl})
+    </insert>
+
+    <update id="updateMaterial" parameterType="com.zb.pojo.Material">
+        update material
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="gradeid != null and gradeid!=''">
+                            gradeid=#{gradeid},
+                        </if>
+                        <if test="subjectid != null and subjectid!=''">
+                            subjectid=#{subjectid},
+                        </if>
+                        <if test="createtime != null and createtime!=''">
+                            createtime=#{createtime},
+                        </if>
+                        <if test="fileUrl != null and fileUrl!=''">
+                            fileUrl=#{fileUrl}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f766955c-e22c-48b7-8a97-6682165c4d4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/axedu.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1e1XznaG0lVXk3hU5ETUZN0npVu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="MybatisCodeHelperSqlLogrunning" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="F:/teacher-test" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.OrderApp">
+    <configuration name="CurriculumApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.curriculum" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.CurriculumApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.GatewayServerApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyEurekaServerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.MyEurekaServerApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.OrderApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SchoolApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.school" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.SchoolApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.UserApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f766955c-e22c-48b7-8a97-6682165c4d4b" name="Default Changelist" comment="" />
+      <created>1593490338039</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593490338039</updated>
+      <workItem from="1593490354017" duration="435000" />
+    </task>
+    <task id="LOCAL-00001" summary="clear by wst">
+      <created>1593490512695</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593490512695</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clear by wst" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear by wst" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1593490497501">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593490497501" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1593490620290">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593490620290" />
+  </component>
+</project>

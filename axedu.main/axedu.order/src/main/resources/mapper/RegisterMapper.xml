@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.RegisterMapper">
+
+    <select id="getRegisterById" resultType="com.zb.pojo.Register">
+        select
+                id as id,
+                account as account,
+                password as password,
+                Administratorid as Administratorid,
+                phone as phone,
+                age as age,
+                identity as identity,
+                mail as mail
+        from register
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getRegisterListByMap" resultType="com.zb.pojo.Register" parameterType="java.util.Map">
+        select
+                id as id,
+                account as account,
+                password as password,
+                Administratorid as Administratorid,
+                phone as phone,
+                age as age,
+                identity as identity,
+                mail as mail
+        from register
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="account != null and account!=''">
+                    and account=#{account}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="Administratorid != null and Administratorid!=''">
+                    and Administratorid=#{Administratorid}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="age != null and age!=''">
+                    and age=#{age}
+                </if>
+                <if test="identity != null and identity!=''">
+                    and identity=#{identity}
+                </if>
+                <if test="mail != null and mail!=''">
+                    and mail=#{mail}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getRegisterCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from register
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="account != null and account!=''">
+                    and account=#{account}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="Administratorid != null and Administratorid!=''">
+                    and Administratorid=#{Administratorid}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="age != null and age!=''">
+                    and age=#{age}
+                </if>
+                <if test="identity != null and identity!=''">
+                    and identity=#{identity}
+                </if>
+                <if test="mail != null and mail!=''">
+                    and mail=#{mail}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertRegister" parameterType="com.zb.pojo.Register">
+        insert into register(
+                        account,
+                        password,
+                        Administratorid,
+                        phone,
+                        age,
+                        identity,
+                        mail)
+        values(
+                     #{account},
+                     #{password},
+                     #{Administratorid},
+                     #{phone},
+                     #{age},
+                     #{identity},
+                    #{mail})
+    </insert>
+
+    <update id="updateRegister" parameterType="com.zb.pojo.Register">
+        update register
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="account != null and account!=''">
+                            account=#{account},
+                        </if>
+                        <if test="password != null and password!=''">
+                            password=#{password},
+                        </if>
+                        <if test="Administratorid != null and Administratorid!=''">
+                            Administratorid=#{Administratorid},
+                        </if>
+                        <if test="phone != null and phone!=''">
+                            phone=#{phone},
+                        </if>
+                        <if test="age != null and age!=''">
+                            age=#{age},
+                        </if>
+                        <if test="identity != null and identity!=''">
+                            identity=#{identity},
+                        </if>
+                        <if test="mail != null and mail!=''">
+                            mail=#{mail}
+                        </if>
+        </trim>
+    </update>
+</mapper>

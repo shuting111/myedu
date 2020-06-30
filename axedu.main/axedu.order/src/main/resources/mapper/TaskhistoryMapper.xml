@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.TaskhistoryMapper">
+
+    <select id="getTaskhistoryById" resultType="com.zb.pojo.Taskhistory">
+        select
+                taskId as taskId,
+                createTime as createTime,
+                myExchange as myExchange,
+                myRoutingKey as myRoutingKey,
+                requestBody as requestBody,
+                version as version,
+                status as status
+        from taskhistory
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getTaskhistoryListByMap" resultType="com.zb.pojo.Taskhistory" parameterType="java.util.Map">
+        select
+                taskId as taskId,
+                createTime as createTime,
+                myExchange as myExchange,
+                myRoutingKey as myRoutingKey,
+                requestBody as requestBody,
+                version as version,
+                status as status
+        from taskhistory
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="taskId != null and taskId!=''">
+                    and taskId=#{taskId}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="myExchange != null and myExchange!=''">
+                    and myExchange=#{myExchange}
+                </if>
+                <if test="myRoutingKey != null and myRoutingKey!=''">
+                    and myRoutingKey=#{myRoutingKey}
+                </if>
+                <if test="requestBody != null and requestBody!=''">
+                    and requestBody=#{requestBody}
+                </if>
+                <if test="version != null and version!=''">
+                    and version=#{version}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getTaskhistoryCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from taskhistory
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="taskId != null and taskId!=''">
+                    and taskId=#{taskId}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="myExchange != null and myExchange!=''">
+                    and myExchange=#{myExchange}
+                </if>
+                <if test="myRoutingKey != null and myRoutingKey!=''">
+                    and myRoutingKey=#{myRoutingKey}
+                </if>
+                <if test="requestBody != null and requestBody!=''">
+                    and requestBody=#{requestBody}
+                </if>
+                <if test="version != null and version!=''">
+                    and version=#{version}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertTaskhistory" parameterType="com.zb.pojo.Taskhistory">
+        insert into taskhistory(
+                        taskId,
+                        createTime,
+                        myExchange,
+                        myRoutingKey,
+                        requestBody,
+                        version,
+                        status)
+        values(
+                     #{taskId},
+                     #{createTime},
+                     #{myExchange},
+                     #{myRoutingKey},
+                     #{requestBody},
+                     #{version},
+                    #{status})
+    </insert>
+
+    <update id="updateTaskhistory" parameterType="com.zb.pojo.Taskhistory">
+        update taskhistory
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="taskId != null and taskId!=''">
+                            taskId=#{taskId},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
+                        </if>
+                        <if test="myExchange != null and myExchange!=''">
+                            myExchange=#{myExchange},
+                        </if>
+                        <if test="myRoutingKey != null and myRoutingKey!=''">
+                            myRoutingKey=#{myRoutingKey},
+                        </if>
+                        <if test="requestBody != null and requestBody!=''">
+                            requestBody=#{requestBody},
+                        </if>
+                        <if test="version != null and version!=''">
+                            version=#{version},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.CurriculumMapper">
+
+    <select id="findIsDiscount" resultType="com.zb.pojo.Curriculum">
+        select * from curriculum where originalPrice!=presentPrice
+    </select>
+
+    <update id="updateBanrong">
+        update  curriculum set banrong=banrong-#{banrong} where id=#{id}
+    </update>
+    <select id="getCurriculumById" resultType="com.zb.pojo.Curriculum">
+        select
+                id as id,
+                className as className,
+                subjectId as subjectId,
+                gradeId as gradeId,
+                classtime as classtime,
+                teachingMethod as teachingMethod,
+                schoolId as schoolId,
+                originalPrice as originalPrice,
+                presentPrice as presentPrice,
+                banrong as banrong,
+                openingRule as openingRule,
+                classIntroduce as classIntroduce,
+                teachingTarget as teachingTarget,
+                teachingFeatures as teachingFeatures,
+                teachingContent as teachingContent,
+                isChoiceness as isChoiceness,
+                detailsimg as detailsimg,
+                pageimg as pageimg,
+                areaid as areaid,
+                createtime as createtime,
+                like as like
+        from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getCurriculumListByMap" resultType="com.zb.pojo.Curriculum" parameterType="java.util.Map">
+        select
+                id as id,
+                className as className,
+                subjectId as subjectId,
+                gradeId as gradeId,
+                classtime as classtime,
+                teachingMethod as teachingMethod,
+                schoolId as schoolId,
+                originalPrice as originalPrice,
+                presentPrice as presentPrice,
+                banrong as banrong,
+                openingRule as openingRule,
+                classIntroduce as classIntroduce,
+                teachingTarget as teachingTarget,
+                teachingFeatures as teachingFeatures,
+                teachingContent as teachingContent,
+                isChoiceness as isChoiceness,
+                detailsimg as detailsimg,
+                pageimg as pageimg,
+                areaid as areaid,
+                createtime as createtime,
+                like as like
+        from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="className != null and className!=''">
+                    and className=#{className}
+                </if>
+                <if test="subjectId != null and subjectId!=''">
+                    and subjectId=#{subjectId}
+                </if>
+                <if test="gradeId != null and gradeId!=''">
+                    and gradeId=#{gradeId}
+                </if>
+                <if test="classtime != null and classtime!=''">
+                    and classtime=#{classtime}
+                </if>
+                <if test="teachingMethod != null and teachingMethod!=''">
+                    and teachingMethod=#{teachingMethod}
+                </if>
+                <if test="schoolId != null and schoolId!=''">
+                    and schoolId=#{schoolId}
+                </if>
+                <if test="originalPrice != null and originalPrice!=''">
+                    and originalPrice=#{originalPrice}
+                </if>
+                <if test="presentPrice != null and presentPrice!=''">
+                    and presentPrice=#{presentPrice}
+                </if>
+                <if test="banrong != null and banrong!=''">
+                    and banrong=#{banrong}
+                </if>
+                <if test="openingRule != null and openingRule!=''">
+                    and openingRule=#{openingRule}
+                </if>
+                <if test="classIntroduce != null and classIntroduce!=''">
+                    and classIntroduce=#{classIntroduce}
+                </if>
+                <if test="teachingTarget != null and teachingTarget!=''">
+                    and teachingTarget=#{teachingTarget}
+                </if>
+                <if test="teachingFeatures != null and teachingFeatures!=''">
+                    and teachingFeatures=#{teachingFeatures}
+                </if>
+                <if test="teachingContent != null and teachingContent!=''">
+                    and teachingContent=#{teachingContent}
+                </if>
+                <if test="isChoiceness != null and isChoiceness!=''">
+                    and isChoiceness=#{isChoiceness}
+                </if>
+                <if test="detailsimg != null and detailsimg!=''">
+                    and detailsimg=#{detailsimg}
+                </if>
+                <if test="pageimg != null and pageimg!=''">
+                    and pageimg=#{pageimg}
+                </if>
+                <if test="areaid != null and areaid!=''">
+                    and areaid=#{areaid}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="like != null and like!=''">
+                    and like=#{like}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCurriculumCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="className != null and className!=''">
+                    and className=#{className}
+                </if>
+                <if test="subjectId != null and subjectId!=''">
+                    and subjectId=#{subjectId}
+                </if>
+                <if test="gradeId != null and gradeId!=''">
+                    and gradeId=#{gradeId}
+                </if>
+                <if test="classtime != null and classtime!=''">
+                    and classtime=#{classtime}
+                </if>
+                <if test="teachingMethod != null and teachingMethod!=''">
+                    and teachingMethod=#{teachingMethod}
+                </if>
+                <if test="schoolId != null and schoolId!=''">
+                    and schoolId=#{schoolId}
+                </if>
+                <if test="originalPrice != null and originalPrice!=''">
+                    and originalPrice=#{originalPrice}
+                </if>
+                <if test="presentPrice != null and presentPrice!=''">
+                    and presentPrice=#{presentPrice}
+                </if>
+                <if test="banrong != null and banrong!=''">
+                    and banrong=#{banrong}
+                </if>
+                <if test="openingRule != null and openingRule!=''">
+                    and openingRule=#{openingRule}
+                </if>
+                <if test="classIntroduce != null and classIntroduce!=''">
+                    and classIntroduce=#{classIntroduce}
+                </if>
+                <if test="teachingTarget != null and teachingTarget!=''">
+                    and teachingTarget=#{teachingTarget}
+                </if>
+                <if test="teachingFeatures != null and teachingFeatures!=''">
+                    and teachingFeatures=#{teachingFeatures}
+                </if>
+                <if test="teachingContent != null and teachingContent!=''">
+                    and teachingContent=#{teachingContent}
+                </if>
+                <if test="isChoiceness != null and isChoiceness!=''">
+                    and isChoiceness=#{isChoiceness}
+                </if>
+                <if test="detailsimg != null and detailsimg!=''">
+                    and detailsimg=#{detailsimg}
+                </if>
+                <if test="pageimg != null and pageimg!=''">
+                    and pageimg=#{pageimg}
+                </if>
+                <if test="areaid != null and areaid!=''">
+                    and areaid=#{areaid}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="like != null and like!=''">
+                    and like=#{like}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertCurriculum" parameterType="com.zb.pojo.Curriculum">
+        insert into curriculum(
+                        className,
+                        subjectId,
+                        gradeId,
+                        classtime,
+                        teachingMethod,
+                        schoolId,
+                        originalPrice,
+                        presentPrice,
+                        banrong,
+                        openingRule,
+                        classIntroduce,
+                        teachingTarget,
+                        teachingFeatures,
+                        teachingContent,
+                        isChoiceness,
+                        detailsimg,
+                        pageimg,
+                        areaid,
+                        createtime,
+                        like)
+        values(
+                     #{className},
+                     #{subjectId},
+                     #{gradeId},
+                     #{classtime},
+                     #{teachingMethod},
+                     #{schoolId},
+                     #{originalPrice},
+                     #{presentPrice},
+                     #{banrong},
+                     #{openingRule},
+                     #{classIntroduce},
+                     #{teachingTarget},
+                     #{teachingFeatures},
+                     #{teachingContent},
+                     #{isChoiceness},
+                     #{detailsimg},
+                     #{pageimg},
+                     #{areaid},
+                     #{createtime},
+                    #{like})
+    </insert>
+
+    <update id="updateCurriculum" parameterType="com.zb.pojo.Curriculum">
+        update curriculum
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="className != null and className!=''">
+                            className=#{className},
+                        </if>
+                        <if test="subjectId != null and subjectId!=''">
+                            subjectId=#{subjectId},
+                        </if>
+                        <if test="gradeId != null and gradeId!=''">
+                            gradeId=#{gradeId},
+                        </if>
+                        <if test="classtime != null and classtime!=''">
+                            classtime=#{classtime},
+                        </if>
+                        <if test="teachingMethod != null and teachingMethod!=''">
+                            teachingMethod=#{teachingMethod},
+                        </if>
+                        <if test="schoolId != null and schoolId!=''">
+                            schoolId=#{schoolId},
+                        </if>
+                        <if test="originalPrice != null and originalPrice!=''">
+                            originalPrice=#{originalPrice},
+                        </if>
+                        <if test="presentPrice != null and presentPrice!=''">
+                            presentPrice=#{presentPrice},
+                        </if>
+                        <if test="banrong != null and banrong!=''">
+                            banrong=#{banrong},
+                        </if>
+                        <if test="openingRule != null and openingRule!=''">
+                            openingRule=#{openingRule},
+                        </if>
+                        <if test="classIntroduce != null and classIntroduce!=''">
+                            classIntroduce=#{classIntroduce},
+                        </if>
+                        <if test="teachingTarget != null and teachingTarget!=''">
+                            teachingTarget=#{teachingTarget},
+                        </if>
+                        <if test="teachingFeatures != null and teachingFeatures!=''">
+                            teachingFeatures=#{teachingFeatures},
+                        </if>
+                        <if test="teachingContent != null and teachingContent!=''">
+                            teachingContent=#{teachingContent},
+                        </if>
+                        <if test="isChoiceness != null and isChoiceness!=''">
+                            isChoiceness=#{isChoiceness},
+                        </if>
+                        <if test="detailsimg != null and detailsimg!=''">
+                            detailsimg=#{detailsimg},
+                        </if>
+                        <if test="pageimg != null and pageimg!=''">
+                            pageimg=#{pageimg},
+                        </if>
+                        <if test="areaid != null and areaid!=''">
+                            areaid=#{areaid},
+                        </if>
+                        <if test="createtime != null and createtime!=''">
+                            createtime=#{createtime},
+                        </if>
+                        <if test="like != null and like!=''">
+                            like=#{like}
+                        </if>
+        </trim>
+    </update>
+</mapper>

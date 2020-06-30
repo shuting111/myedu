@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.PurchaserecordMapper">
+
+    <select id="getPurchaserecordById" resultType="com.zb.pojo.Purchaserecord">
+        select
+                purchId as purchId,
+                goodsId as goodsId,
+                userId as userId,
+                price as price,
+                valid as valid,
+                startTime as startTime,
+                endTime as endTime,
+                status as status
+        from purchaserecord
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getPurchaserecordListByMap" resultType="com.zb.pojo.Purchaserecord" parameterType="java.util.Map">
+        select
+                purchId as purchId,
+                goodsId as goodsId,
+                userId as userId,
+                price as price,
+                valid as valid,
+                startTime as startTime,
+                endTime as endTime,
+                status as status
+        from purchaserecord
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="purchId != null and purchId!=''">
+                    and purchId=#{purchId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="price != null and price!=''">
+                    and price=#{price}
+                </if>
+                <if test="valid != null and valid!=''">
+                    and valid=#{valid}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getPurchaserecordCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from purchaserecord
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="purchId != null and purchId!=''">
+                    and purchId=#{purchId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="price != null and price!=''">
+                    and price=#{price}
+                </if>
+                <if test="valid != null and valid!=''">
+                    and valid=#{valid}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertPurchaserecord" parameterType="com.zb.pojo.Purchaserecord">
+        insert into purchaserecord(
+                        purchId,
+                        goodsId,
+                        userId,
+                        price,
+                        valid,
+                        startTime,
+                        endTime,
+                        status)
+        values(
+                     #{purchId},
+                     #{goodsId},
+                     #{userId},
+                     #{price},
+                     #{valid},
+                     #{startTime},
+                     #{endTime},
+                    #{status})
+    </insert>
+
+    <update id="updatePurchaserecord" parameterType="com.zb.pojo.Purchaserecord">
+        update purchaserecord
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="purchId != null and purchId!=''">
+                            purchId=#{purchId},
+                        </if>
+                        <if test="goodsId != null and goodsId!=''">
+                            goodsId=#{goodsId},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="price != null and price!=''">
+                            price=#{price},
+                        </if>
+                        <if test="valid != null and valid!=''">
+                            valid=#{valid},
+                        </if>
+                        <if test="startTime != null and startTime!=''">
+                            startTime=#{startTime},
+                        </if>
+                        <if test="endTime != null and endTime!=''">
+                            endTime=#{endTime},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.AreaMapper">
+
+    <select id="getAreaById" resultType="com.zb.pojo.Area">
+        select
+                id as id,
+                name as name,
+                areaNo as areaNo,
+                parent as parent,
+                level as level,
+                isChina as isChina
+        from area
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getAreaListByMap" resultType="com.zb.pojo.Area" parameterType="java.util.Map">
+        select
+                id as id,
+                name as name,
+                areaNo as areaNo,
+                parent as parent,
+                level as level,
+                isChina as isChina
+        from area
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="areaNo != null and areaNo!=''">
+                    and areaNo=#{areaNo}
+                </if>
+                <if test="parent != null and parent!=''">
+                    and parent=#{parent}
+                </if>
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+                <if test="isChina != null and isChina!=''">
+                    and isChina=#{isChina}
+                </if>
+
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getAreaCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from area
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="areaNo != null and areaNo!=''">
+                    and areaNo=#{areaNo}
+                </if>
+                <if test="parent != null and parent!=''">
+                    and parent=#{parent}
+                </if>
+
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+                <if test="isChina != null and isChina!=''">
+                    and isChina=#{isChina}
+                </if>
+
+        </trim>
+    </select>
+
+    <insert id="insertArea" parameterType="com.zb.pojo.Area">
+        insert into area(
+                        name,
+                        areaNo,
+                        parent,
+                        level,
+                        isChina)
+        values(
+                     #{name},
+                     #{areaNo},
+                     #{parent},
+                     #{level},
+                     #{isChina})
+    </insert>
+
+    <update id="updateArea" parameterType="com.zb.pojo.Area">
+        update area
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="areaNo != null and areaNo!=''">
+                            areaNo=#{areaNo},
+                        </if>
+                        <if test="parent != null and parent!=''">
+                            parent=#{parent},
+                        </if>
+
+                        <if test="level != null and level!=''">
+                            level=#{level},
+                        </if>
+                        <if test="isChina != null and isChina!=''">
+                            isChina=#{isChina},
+                        </if>
+
+        </trim>
+    </update>
+</mapper>

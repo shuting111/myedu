@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.OrdersMapper">
+
+    <select id="findByOrderNo" resultType="com.zb.pojo.Orders">
+        SELECT * FROM orders WHERE orderNo =#{orderNo}
+    </select>
+
+    <select id="getOrdersById" resultType="com.zb.pojo.Orders">
+        select
+                oid as oid,
+                goodsId as goodsId,
+                userId as userId,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                orderName as orderName,
+                orderStatus as orderStatus,
+                payAmount as payAmount,
+                paytype as paytype,
+                modifyTime as modifyTime,
+                noticePhone as noticePhone,
+                noticeEmail as noticeEmail,
+                startTime as startTime,
+                endTime as endTime,
+                number as number
+        from orders
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and oid=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getOrdersListByMap" resultType="com.zb.pojo.Orders" parameterType="java.util.Map">
+        select
+                oid as oid,
+                goodsId as goodsId,
+                userId as userId,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                orderName as orderName,
+                orderStatus as orderStatus,
+                payAmount as payAmount,
+                paytype as paytype,
+                modifyTime as modifyTime,
+                noticePhone as noticePhone,
+                noticeEmail as noticeEmail,
+                startTime as startTime,
+                endTime as endTime,
+                number as number
+        from orders
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="oid != null and oid!=''">
+                    and oid=#{oid}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="orderName != null and orderName!=''">
+                    and orderName=#{orderName}
+                </if>
+                <if test="orderStatus != null and orderStatus!=''">
+                    and orderStatus=#{orderStatus}
+                </if>
+                <if test="payAmount != null and payAmount!=''">
+                    and payAmount=#{payAmount}
+                </if>
+                <if test="paytype != null and paytype!=''">
+                    and paytype=#{paytype}
+                </if>
+                <if test="modifyTime != null and modifyTime!=''">
+                    and modifyTime=#{modifyTime}
+                </if>
+                <if test="noticePhone != null and noticePhone!=''">
+                    and noticePhone=#{noticePhone}
+                </if>
+                <if test="noticeEmail != null and noticeEmail!=''">
+                    and noticeEmail=#{noticeEmail}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="number != null and number!=''">
+                    and number=#{number}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getOrdersCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from orders
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="oid != null and oid!=''">
+                    and oid=#{oid}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="orderName != null and orderName!=''">
+                    and orderName=#{orderName}
+                </if>
+                <if test="orderStatus != null and orderStatus!=''">
+                    and orderStatus=#{orderStatus}
+                </if>
+                <if test="payAmount != null and payAmount!=''">
+                    and payAmount=#{payAmount}
+                </if>
+                <if test="paytype != null and paytype!=''">
+                    and paytype=#{paytype}
+                </if>
+                <if test="modifyTime != null and modifyTime!=''">
+                    and modifyTime=#{modifyTime}
+                </if>
+                <if test="noticePhone != null and noticePhone!=''">
+                    and noticePhone=#{noticePhone}
+                </if>
+                <if test="noticeEmail != null and noticeEmail!=''">
+                    and noticeEmail=#{noticeEmail}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="number != null and number!=''">
+                    and number=#{number}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertOrders" parameterType="com.zb.pojo.Orders">
+        insert into orders(
+                        oid,
+                        goodsId,
+                        userId,
+                        orderNo,
+                        tradeNo,
+                        orderName,
+                        orderStatus,
+                        payAmount,
+                        paytype,
+                        modifyTime,
+                        noticePhone,
+                        noticeEmail,
+                        startTime,
+                        endTime,
+                        number)
+        values(
+                     #{oid},
+                     #{goodsId},
+                     #{userId},
+                     #{orderNo},
+                     #{tradeNo},
+                     #{orderName},
+                     0,
+                     #{payAmount},
+                     #{paytype},
+                     now(),
+                     #{noticePhone},
+                     #{noticeEmail},
+                     now(),
+                     #{endTime},
+                    #{number})
+    </insert>
+
+    <update id="updateOrders" parameterType="com.zb.pojo.Orders">
+        update orders
+        <trim prefix="set" suffixOverrides="," suffix="where oid=#{oid}">
+                        <if test="oid != null and oid!=''">
+                            oid=#{oid},
+                        </if>
+                        <if test="goodsId != null and goodsId!=''">
+                            goodsId=#{goodsId},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="orderNo != null and orderNo!=''">
+                            orderNo=#{orderNo},
+                        </if>
+                        <if test="tradeNo != null and tradeNo!=''">
+                            tradeNo=#{tradeNo},
+                        </if>
+                        <if test="orderName != null and orderName!=''">
+                            orderName=#{orderName},
+                        </if>
+                        <if test="orderStatus != null and orderStatus!=''">
+                            orderStatus=#{orderStatus},
+                        </if>
+                        <if test="payAmount != null and payAmount!=''">
+                            payAmount=#{payAmount},
+                        </if>
+                        <if test="paytype != null and paytype!=''">
+                            paytype=#{paytype},
+                        </if>
+                        <if test="modifyTime != null and modifyTime!=''">
+                            modifyTime=#{modifyTime},
+                        </if>
+                        <if test="noticePhone != null and noticePhone!=''">
+                            noticePhone=#{noticePhone},
+                        </if>
+                        <if test="noticeEmail != null and noticeEmail!=''">
+                            noticeEmail=#{noticeEmail},
+                        </if>
+                        <if test="startTime != null and startTime!=''">
+                            startTime=#{startTime},
+                        </if>
+                        <if test="endTime != null and endTime!=''">
+                            endTime=#{endTime},
+                        </if>
+                        <if test="number != null and number!=''">
+                            number=#{number}
+                        </if>
+        </trim>
+    </update>
+</mapper>

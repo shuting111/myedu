@@ -1,0 +1,43 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: curriculum-server
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ax_eud
+    username: root
+    password: ok
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password: ok
+  cache:
+    ehcache:
+      config: classpath:/ehcache.xml
+    type: ehcache
+  rabbitmq:
+    virtual-host: /
+    host: 127.0.0.1
+    password: guest
+    username: guest
+    port: 5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@localhost:7001/eureka/
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+myes:
+  host: 127.0.0.1:9200
+
+qiniu:
+  accessKey: yhcR6v8uCVYKagIyAdIXZP178nX38Ksqv278MhbU
+  secretKey: HIrDxLh5XZS1iYlnj_tusqSbQjnCx4PnbZ_dB1qI
+  bucket: axedu
+  path: http://qbbxbtow0.bkt.clouddn.com/
+
+logging:
+  level: info
+  path: ./logs
+  config: classpath:logback-dev.xml

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.ShopingMapper">
+
+    <select id="getShopingById" resultType="com.zb.pojo.Shoping">
+        select
+                sid as sid,
+                shopingId as shopingId,
+                shopingName as shopingName,
+                shopingStatus as shopingStatus,
+                userId as userId,
+                shopingPrice as shopingPrice,
+                createTime as createTime,
+                number as number
+        from shoping
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getShopingListByMap" resultType="com.zb.pojo.Shoping" parameterType="java.util.Map">
+        select
+                sid as sid,
+                shopingId as shopingId,
+                shopingName as shopingName,
+                shopingStatus as shopingStatus,
+                userId as userId,
+                shopingPrice as shopingPrice,
+                createTime as createTime,
+                number as number
+        from shoping
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="sid != null and sid!=''">
+                    and sid=#{sid}
+                </if>
+                <if test="shopingId != null and shopingId!=''">
+                    and shopingId=#{shopingId}
+                </if>
+                <if test="shopingName != null and shopingName!=''">
+                    and shopingName=#{shopingName}
+                </if>
+                <if test="shopingStatus != null and shopingStatus!=''">
+                    and shopingStatus=#{shopingStatus}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="shopingPrice != null and shopingPrice!=''">
+                    and shopingPrice=#{shopingPrice}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="number != null and number!=''">
+                    and number=#{number}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getShopingCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from shoping
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="sid != null and sid!=''">
+                    and sid=#{sid}
+                </if>
+                <if test="shopingId != null and shopingId!=''">
+                    and shopingId=#{shopingId}
+                </if>
+                <if test="shopingName != null and shopingName!=''">
+                    and shopingName=#{shopingName}
+                </if>
+                <if test="shopingStatus != null and shopingStatus!=''">
+                    and shopingStatus=#{shopingStatus}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="shopingPrice != null and shopingPrice!=''">
+                    and shopingPrice=#{shopingPrice}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="number != null and number!=''">
+                    and number=#{number}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertShoping" parameterType="com.zb.pojo.Shoping">
+        insert into shoping(
+                        sid,
+                        shopingId,
+                        shopingName,
+                        shopingStatus,
+                        userId,
+                        shopingPrice,
+                        createTime,
+                        number)
+        values(
+                     #{sid},
+                     #{shopingId},
+                     #{shopingName},
+                     #{shopingStatus},
+                     #{userId},
+                     #{shopingPrice},
+                     #{createTime},
+                    #{number})
+    </insert>
+
+    <update id="updateShoping" parameterType="com.zb.pojo.Shoping">
+        update shoping
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="sid != null and sid!=''">
+                            sid=#{sid},
+                        </if>
+                        <if test="shopingId != null and shopingId!=''">
+                            shopingId=#{shopingId},
+                        </if>
+                        <if test="shopingName != null and shopingName!=''">
+                            shopingName=#{shopingName},
+                        </if>
+                        <if test="shopingStatus != null and shopingStatus!=''">
+                            shopingStatus=#{shopingStatus},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="shopingPrice != null and shopingPrice!=''">
+                            shopingPrice=#{shopingPrice},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
+                        </if>
+                        <if test="number != null and number!=''">
+                            number=#{number}
+                        </if>
+        </trim>
+    </update>
+</mapper>

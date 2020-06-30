@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.SubjectMapper">
+
+    <select id="getSubjectById" resultType="com.zb.pojo.Subject">
+        select
+                subjectId as subjectId,
+                subjectName as subjectName
+        from subject
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and subjectId=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getSubjectListByMap" resultType="com.zb.pojo.Subject" parameterType="java.util.Map">
+        select
+                subjectId as subjectId,
+                subjectName as subjectName
+        from subject
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="subjectId != null and subjectId!=''">
+                    and subjectId=#{subjectId}
+                </if>
+                <if test="subjectName != null and subjectName!=''">
+                    and subjectName=#{subjectName}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getSubjectCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from subject
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="subjectId != null and subjectId!=''">
+                    and subjectId=#{subjectId}
+                </if>
+                <if test="subjectName != null and subjectName!=''">
+                    and subjectName=#{subjectName}
+                </if>
+        </trim>
+    </select>
+    <select id="findSubjectByGradeId" resultType="com.zb.pojo.Subject">
+        SELECT s.`subjectId`,s.`subjectName` FROM `subject` s,`grade_subject` l
+        WHERE s.`subjectId` = l.`subjectid`
+        AND l.`gradeid` = #{gid}
+    </select>
+
+    <insert id="insertSubject" parameterType="com.zb.pojo.Subject">
+        insert into subject(
+                        subjectId,
+                        subjectName)
+        values(
+                     #{subjectId},
+                    #{subjectName})
+    </insert>
+
+    <update id="updateSubject" parameterType="com.zb.pojo.Subject">
+        update subject
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="subjectId != null and subjectId!=''">
+                            subjectId=#{subjectId},
+                        </if>
+                        <if test="subjectName != null and subjectName!=''">
+                            subjectName=#{subjectName}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.GradeMapper">
+
+    <select id="getGradeById" resultType="com.zb.pojo.Grade">
+        select
+                gradeid as gradeid,
+                gradename as gradename,
+                level as level
+        from grade
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and gradeid=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getGradeListByMap" resultType="com.zb.pojo.Grade" parameterType="java.util.Map">
+        select
+                gradeid as gradeid,
+                gradename as gradename,
+                level as level
+        from grade
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="gradeid != null and gradeid!=''">
+                    and gradeid=#{gradeid}
+                </if>
+                <if test="gradename != null and gradename!=''">
+                    and gradename=#{gradename}
+                </if>
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getGradeCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from grade
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="gradeid != null and gradeid!=''">
+                    and gradeid=#{gradeid}
+                </if>
+                <if test="gradename != null and gradename!=''">
+                    and gradename=#{gradename}
+                </if>
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+        </trim>
+    </select>
+    <select id="findGrade" resultType="com.zb.pojo.Grade">
+    <![CDATA[
+        SELECT *  FROM  `grade` WHERE LEVEL <> 0
+        ]]>
+    </select>
+
+    <insert id="insertGrade" parameterType="com.zb.pojo.Grade">
+        insert into grade(
+                        gradeid,
+                        gradename,
+                        level)
+        values(
+                     #{gradeid},
+                     #{gradename},
+                    #{level})
+    </insert>
+
+    <update id="updateGrade" parameterType="com.zb.pojo.Grade">
+        update grade
+        <trim prefix="set" suffixOverrides="," suffix="where gradeid=#{gradeid}">
+                        <if test="gradeid != null and gradeid!=''">
+                            gradeid=#{gradeid},
+                        </if>
+                        <if test="gradename != null and gradename!=''">
+                            gradename=#{gradename},
+                        </if>
+                        <if test="level != null and level!=''">
+                            level=#{level}
+                        </if>
+        </trim>
+    </update>
+</mapper>

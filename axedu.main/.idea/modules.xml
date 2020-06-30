@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/axedu.common.api/axedu.common.api.iml" filepath="$PROJECT_DIR$/axedu.common.api/axedu.common.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.curriculum/axedu.curriculum.iml" filepath="$PROJECT_DIR$/axedu.curriculum/axedu.curriculum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.curriculum.api/axedu.curriculum.api.iml" filepath="$PROJECT_DIR$/axedu.curriculum.api/axedu.curriculum.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.eureka/axedu.eureka.iml" filepath="$PROJECT_DIR$/axedu.eureka/axedu.eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.gateway/axedu.gateway.iml" filepath="$PROJECT_DIR$/axedu.gateway/axedu.gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.main.iml" filepath="$PROJECT_DIR$/axedu.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.order/axedu.order.iml" filepath="$PROJECT_DIR$/axedu.order/axedu.order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.order.api/axedu.order.api.iml" filepath="$PROJECT_DIR$/axedu.order.api/axedu.order.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.school/axedu.school.iml" filepath="$PROJECT_DIR$/axedu.school/axedu.school.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.school.api/axedu.school.api.iml" filepath="$PROJECT_DIR$/axedu.school.api/axedu.school.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.user/axedu.user.iml" filepath="$PROJECT_DIR$/axedu.user/axedu.user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.user.api/axedu.user.api.iml" filepath="$PROJECT_DIR$/axedu.user.api/axedu.user.api.iml" />
+    </modules>
+  </component>
+</project>

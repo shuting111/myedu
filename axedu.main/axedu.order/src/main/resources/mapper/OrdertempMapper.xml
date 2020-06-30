@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.OrdertempMapper">
+
+    <select id="getTempCount" resultType="int">
+        select count(*) from `ordertemp` where goodsId=#{id}
+    </select>
+
+    <select id="findOnlyOne" resultType="com.zb.pojo.Ordertemp">
+        select * from `ordertemp` where goodsId=#{id} and userId=#{uid}
+    </select>
+    <select id="getOrdertempById" resultType="com.zb.pojo.Ordertemp">
+        select
+                tempId as tempId,
+                goodsId as goodsId,
+                recordTime as recordTime,
+                store as store,
+                status as status,
+                userId as userId
+        from ordertemp
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getOrdertempListByMap" resultType="com.zb.pojo.Ordertemp" parameterType="java.util.Map">
+        select
+                tempId as tempId,
+                goodsId as goodsId,
+                recordTime as recordTime,
+                store as store,
+                status as status,
+                userId as userId
+        from ordertemp
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="tempId != null and tempId!=''">
+                    and tempId=#{tempId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="recordTime != null and recordTime!=''">
+                    and recordTime=#{recordTime}
+                </if>
+                <if test="store != null and store!=''">
+                    and store=#{store}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getOrdertempCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from ordertemp
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="tempId != null and tempId!=''">
+                    and tempId=#{tempId}
+                </if>
+                <if test="goodsId != null and goodsId!=''">
+                    and goodsId=#{goodsId}
+                </if>
+                <if test="recordTime != null and recordTime!=''">
+                    and recordTime=#{recordTime}
+                </if>
+                <if test="store != null and store!=''">
+                    and store=#{store}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertOrdertemp" parameterType="com.zb.pojo.Ordertemp">
+        insert into ordertemp(
+                        tempId,
+                        goodsId,
+                        recordTime,
+                        store,
+                        status,
+                        userId)
+        values(
+                     #{tempId},
+                     #{goodsId},
+                     now(),
+                     #{store},
+                     #{status},
+                    #{userId})
+    </insert>
+
+    <update id="updateOrdertemp" parameterType="com.zb.pojo.Ordertemp">
+        update ordertemp
+        <trim prefix="set" suffixOverrides="," suffix="where tempId=#{tempId}">
+                        <if test="tempId != null and tempId!=''">
+                            tempId=#{tempId},
+                        </if>
+                        <if test="goodsId != null and goodsId!=''">
+                            goodsId=#{goodsId},
+                        </if>
+                        <if test="recordTime != null and recordTime!=''">
+                            recordTime=#{recordTime},
+                        </if>
+                        <if test="store != null and store!=''">
+                            store=#{store},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId}
+                        </if>
+        </trim>
+    </update>
+</mapper>

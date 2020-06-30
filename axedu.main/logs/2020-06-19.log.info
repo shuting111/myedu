@@ -1,0 +1,358 @@
+2020-06-19 15:25:24 [main] INFO  com.zb.CurriculumApp - No active profile set, falling back to default profiles: default
+2020-06-19 15:25:24 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4bef0fe3: startup date [Fri Jun 19 15:25:24 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44c03695
+2020-06-19 15:25:26 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-19 15:25:27 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=b88eefed-2b67-3c14-8e7e-332df9b370e8
+2020-06-19 15:25:27 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.zb.feign.CurriculumFeignClient' of type [org.springframework.cloud.netflix.feign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$e3c90c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$1b82e41e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$63ead598] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$90e308b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47d0d29b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$8556cd5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration$$EnhancerBySpringCGLIB$$1ff59a5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:28 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'ehCacheCacheManager' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:28 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [org.springframework.cache.ehcache.EhCacheCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:28 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:25:28 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2020-06-19 15:25:28 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-19 15:25:28 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4220 ms
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-19 15:25:29 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-19 15:25:43 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-06-19 15:25:44 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:25:44 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:25:44 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:25:44 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4bef0fe3: startup date [Fri Jun 19 15:25:24 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44c03695
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAdvertUrl],methods=[GET]}" onto public java.util.List<com.zb.pojo.Advert> com.zb.controller.AdvertService.getAdvertUrl(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findAreaByLevel],methods=[GET]}" onto public java.util.List<com.zb.pojo.Area> com.zb.controller.AreaController.findAreaByLevel()
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriById/{id}],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriById(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/importData],methods=[GET]}" onto public void com.zb.controller.CurriculumController.importData() throws java.lang.Exception
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/addIndex],methods=[GET]}" onto public void com.zb.controller.CurriculumController.addIndex() throws java.lang.Exception
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findIsChoiceness/{isChoiceness}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findIsChoiceness(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findKeyWord],methods=[POST]}" onto public com.zb.util.PageUtil<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findKeyWord(com.zb.form.CurriArgs)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/IncreaseHits/{id}],methods=[GET]}" onto public void com.zb.controller.CurriculumController.IncreaseHits(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/CurriculmToRedis],methods=[GET]}" onto public void com.zb.controller.CurriculumController.CurriculmToRedis()
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findLike],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findLike()
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/insertCurriculum],methods=[POST]}" onto public int com.zb.controller.CurriculumController.insertCurriculum(com.zb.pojo.Curriculum)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriculumById],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriculumById(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findGrade],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findGrade()
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findListByParentId/{pid}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findListByParentId(java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialPage],methods=[GET]}" onto public com.zb.util.PageUtil<com.zb.pojo.Material> com.zb.controller.MaterialController.findMaterialPage(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialById],methods=[GET]}" onto public com.zb.pojo.Material com.zb.controller.MaterialController.findMaterialById(java.lang.Long)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/singlefile],methods=[POST]}" onto public int com.zb.controller.MaterialController.singleFileUpload(com.zb.pojo.Material,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findSubject],methods=[GET]}" onto public java.util.List<com.zb.pojo.Subject> com.zb.controller.SubjectController.findSubject()
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-19 15:25:45 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-19 15:25:45 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:25:45 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:25:45 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:25:46 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4bef0fe3,type=ConfigurationPropertiesRebinder]
+2020-06-19 15:25:46 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-06-19 15:25:46 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2020-06-19 15:25:46 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2020-06-19 15:25:46 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-06-19 15:25:46 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2020-06-19 15:25:46 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2020-06-19 15:25:46 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2020-06-19 15:25:46 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2020-06-19 15:25:46 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2020-06-19 15:25:47 [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1592551550749 with initial instances count: 0
+2020-06-19 15:25:50 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application curriculum-server with eureka with status UP
+2020-06-19 15:25:50 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1592551550788, current=UP, previous=STARTING]
+2020-06-19 15:25:50 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001: registering service...
+2020-06-19 15:25:50 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2020-06-19 15:25:50 [SimpleAsyncTaskExecutor-1] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1fe7faa9:0/SimpleConnection@296f7bfd [delegate=amqp://guest@127.0.0.1:5672/, localPort= 51657]
+2020-06-19 15:25:50 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - registration status: 204
+2020-06-19 15:25:50 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-06-19 15:25:51 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2020-06-19 15:25:51 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9001
+2020-06-19 15:25:51 [main] INFO  com.zb.CurriculumApp - Started CurriculumApp in 42.994 seconds (JVM running for 49.692)
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: false
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-06-19 15:26:20 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2020-06-19 15:29:44 [http-nio-9001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-19 15:29:44 [http-nio-9001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-19 15:29:45 [http-nio-9001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
+2020-06-19 15:30:50 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:33:00 [main] INFO  com.zb.CurriculumApp - No active profile set, falling back to default profiles: default
+2020-06-19 15:33:00 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3104351d: startup date [Fri Jun 19 15:33:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 15:33:02 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-19 15:33:03 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=b88eefed-2b67-3c14-8e7e-332df9b370e8
+2020-06-19 15:33:03 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.zb.feign.CurriculumFeignClient' of type [org.springframework.cloud.netflix.feign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$54b2f494] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$61f947e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$aa613963] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$d7596c84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e473666] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$cbcd3128] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration$$EnhancerBySpringCGLIB$$666bfe26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'ehCacheCacheManager' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [org.springframework.cache.ehcache.EhCacheCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:04 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:33:05 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2020-06-19 15:33:05 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-19 15:33:05 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4673 ms
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-19 15:33:05 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-19 15:33:21 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-06-19 15:33:22 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:33:22 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:33:22 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:33:22 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3104351d: startup date [Fri Jun 19 15:33:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAdvertUrl],methods=[GET]}" onto public java.util.List<com.zb.pojo.Advert> com.zb.controller.AdvertService.getAdvertUrl(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findAreaByLevel],methods=[GET]}" onto public java.util.List<com.zb.pojo.Area> com.zb.controller.AreaController.findAreaByLevel()
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriculumById],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriculumById(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findLike],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findLike()
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/importData],methods=[GET]}" onto public void com.zb.controller.CurriculumController.importData() throws java.lang.Exception
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/insertCurriculum],methods=[POST]}" onto public int com.zb.controller.CurriculumController.insertCurriculum(com.zb.pojo.Curriculum)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/CurriculmToRedis],methods=[GET]}" onto public void com.zb.controller.CurriculumController.CurriculmToRedis()
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findKeyWord],methods=[POST]}" onto public com.zb.util.PageUtil<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findKeyWord(com.zb.form.CurriArgs)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriById/{id}],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriById(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/addIndex],methods=[GET]}" onto public void com.zb.controller.CurriculumController.addIndex() throws java.lang.Exception
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/IncreaseHits/{id}],methods=[GET]}" onto public void com.zb.controller.CurriculumController.IncreaseHits(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findIsChoiceness/{isChoiceness}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findIsChoiceness(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findListByParentId/{pid}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findListByParentId(java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findGrade],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findGrade()
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialPage],methods=[GET]}" onto public com.zb.util.PageUtil<com.zb.pojo.Material> com.zb.controller.MaterialController.findMaterialPage(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/singlefile],methods=[POST]}" onto public int com.zb.controller.MaterialController.singleFileUpload(com.zb.pojo.Material,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialById],methods=[GET]}" onto public com.zb.pojo.Material com.zb.controller.MaterialController.findMaterialById(java.lang.Long)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findSubject],methods=[GET]}" onto public java.util.List<com.zb.pojo.Subject> com.zb.controller.SubjectController.findSubject()
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-19 15:33:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-19 15:33:23 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:33:23 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:33:23 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:33:25 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=3104351d,type=ConfigurationPropertiesRebinder]
+2020-06-19 15:33:26 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-06-19 15:33:26 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2020-06-19 15:33:26 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2020-06-19 15:33:26 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-06-19 15:33:26 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2020-06-19 15:33:26 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2020-06-19 15:33:26 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2020-06-19 15:33:26 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2020-06-19 15:33:26 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2020-06-19 15:33:27 [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1592552010595 with initial instances count: 1
+2020-06-19 15:33:30 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application curriculum-server with eureka with status UP
+2020-06-19 15:33:30 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1592552010645, current=UP, previous=STARTING]
+2020-06-19 15:33:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001: registering service...
+2020-06-19 15:33:30 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2020-06-19 15:33:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - registration status: 204
+2020-06-19 15:33:30 [SimpleAsyncTaskExecutor-1] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4c38a475:0/SimpleConnection@25b22ff5 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52104]
+2020-06-19 15:33:30 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-06-19 15:33:30 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2020-06-19 15:33:30 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9001
+2020-06-19 15:33:30 [main] INFO  com.zb.CurriculumApp - Started CurriculumApp in 50.118 seconds (JVM running for 60.967)
+2020-06-19 15:34:30 [http-nio-9001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-19 15:34:30 [http-nio-9001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-19 15:34:30 [http-nio-9001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
+2020-06-19 15:37:03 [Thread-91] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3104351d: startup date [Fri Jun 19 15:33:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 15:37:03 [Thread-91] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application curriculum-server with eureka with status DOWN
+2020-06-19 15:37:03 [Thread-91] WARN  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1592552223680, current=DOWN, previous=UP]
+2020-06-19 15:37:03 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001: registering service...
+2020-06-19 15:37:03 [Thread-91] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2020-06-19 15:37:03 [Thread-91] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2020-06-19 15:37:03 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - registration status: 204
+2020-06-19 15:37:03 [Thread-91] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - deregister  status: 200
+2020-06-19 15:37:03 [Thread-91] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2020-06-19 15:37:03 [Thread-91] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2020-06-19 15:37:03 [Thread-91] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2020-06-19 15:37:04 [Thread-91] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2020-06-19 15:37:04 [Thread-91] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2020-06-19 15:37:04 [Thread-91] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147482648
+2020-06-19 15:37:04 [Thread-91] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2020-06-19 15:37:04 [Thread-91] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2020-06-19 15:37:41 [main] INFO  com.zb.CurriculumApp - No active profile set, falling back to default profiles: default
+2020-06-19 15:37:41 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e4fa1da: startup date [Fri Jun 19 15:37:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 15:37:43 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-19 15:37:43 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=b88eefed-2b67-3c14-8e7e-332df9b370e8
+2020-06-19 15:37:43 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-06-19 15:37:43 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.zb.feign.CurriculumFeignClient' of type [org.springframework.cloud.netflix.feign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:43 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$1de24c6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:43 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$2b289fc1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7390913b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$a088c45c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$57768e3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$94fc8900] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration$$EnhancerBySpringCGLIB$$2f9b55fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'ehCacheCacheManager' of type [net.sf.ehcache.CacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [org.springframework.cache.ehcache.EhCacheCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:44 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 15:37:45 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2020-06-19 15:37:45 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-06-19 15:37:45 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.16
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4710 ms
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-19 15:37:46 [localhost-startStop-1] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-19 15:38:03 [main] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2020-06-19 15:38:03 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:38:03 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:38:03 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-06-19 15:38:03 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e4fa1da: startup date [Fri Jun 19 15:37:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAdvertUrl],methods=[GET]}" onto public java.util.List<com.zb.pojo.Advert> com.zb.controller.AdvertService.getAdvertUrl(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findAreaByLevel],methods=[GET]}" onto public java.util.List<com.zb.pojo.Area> com.zb.controller.AreaController.findAreaByLevel()
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriculumById],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriculumById(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/addIndex],methods=[GET]}" onto public void com.zb.controller.CurriculumController.addIndex() throws java.lang.Exception
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/importData],methods=[GET]}" onto public void com.zb.controller.CurriculumController.importData() throws java.lang.Exception
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findKeyWord],methods=[POST]}" onto public com.zb.util.PageUtil<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findKeyWord(com.zb.form.CurriArgs)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/insertCurriculum],methods=[POST]}" onto public int com.zb.controller.CurriculumController.insertCurriculum(com.zb.pojo.Curriculum)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/CurriculmToRedis],methods=[GET]}" onto public void com.zb.controller.CurriculumController.CurriculmToRedis()
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findCurriById/{id}],methods=[GET]}" onto public com.zb.pojo.Curriculum com.zb.controller.CurriculumController.findCurriById(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findIsChoiceness/{isChoiceness}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findIsChoiceness(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/IncreaseHits/{id}],methods=[GET]}" onto public void com.zb.controller.CurriculumController.IncreaseHits(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findLike],methods=[GET]}" onto public java.util.List<com.zb.pojo.Curriculum> com.zb.controller.CurriculumController.findLike()
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findListByParentId/{pid}],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findListByParentId(java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findGrade],methods=[GET]}" onto public java.util.List<com.zb.pojo.Grade> com.zb.controller.GradeController.findGrade()
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/singlefile],methods=[POST]}" onto public int com.zb.controller.MaterialController.singleFileUpload(com.zb.pojo.Material,javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile[])
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialPage],methods=[GET]}" onto public com.zb.util.PageUtil<com.zb.pojo.Material> com.zb.controller.MaterialController.findMaterialPage(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findMaterialById],methods=[GET]}" onto public com.zb.pojo.Material com.zb.controller.MaterialController.findMaterialById(java.lang.Long)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/findSubject],methods=[GET]}" onto public java.util.List<com.zb.pojo.Subject> com.zb.controller.SubjectController.findSubject()
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-19 15:38:04 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-19 15:38:04 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:38:04 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:38:04 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-19 15:38:05 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=5e4fa1da,type=ConfigurationPropertiesRebinder]
+2020-06-19 15:38:06 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2020-06-19 15:38:07 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase -2147482648
+2020-06-19 15:38:07 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2020-06-19 15:38:07 [main] INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-06-19 15:38:07 [main] INFO  com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2020-06-19 15:38:07 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2020-06-19 15:38:07 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2020-06-19 15:38:07 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2020-06-19 15:38:07 [main] INFO  c.n.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2020-06-19 15:38:08 [main] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-06-19 15:38:11 [main] INFO  com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1592552291949 with initial instances count: 0
+2020-06-19 15:38:12 [main] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Registering application curriculum-server with eureka with status UP
+2020-06-19 15:38:12 [main] INFO  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1592552292009, current=UP, previous=STARTING]
+2020-06-19 15:38:12 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001: registering service...
+2020-06-19 15:38:12 [main] INFO  o.s.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2020-06-19 15:38:12 [SimpleAsyncTaskExecutor-1] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#67995635:0/SimpleConnection@7dd5d415 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 52325]
+2020-06-19 15:38:12 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - registration status: 204
+2020-06-19 15:38:12 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-06-19 15:38:12 [main] INFO  o.s.b.c.e.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2020-06-19 15:38:12 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9001
+2020-06-19 15:38:12 [main] INFO  com.zb.CurriculumApp - Started CurriculumApp in 50.145 seconds (JVM running for 59.584)
+2020-06-19 15:38:30 [http-nio-9001-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-19 15:38:30 [http-nio-9001-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-19 15:38:30 [http-nio-9001-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 58 ms
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Application is null : false
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Application version is -1: false
+2020-06-19 15:38:41 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2020-06-19 15:38:42 [DiscoveryClient-CacheRefreshExecutor-0] INFO  com.netflix.discovery.DiscoveryClient - The response status is 200
+2020-06-19 15:43:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:48:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:53:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 15:58:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:03:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:08:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:13:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:18:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:23:11 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-06-19 16:24:08 [Thread-55] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e4fa1da: startup date [Fri Jun 19 15:37:41 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@528c868
+2020-06-19 16:24:08 [Thread-55] INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry - Unregistering application curriculum-server with eureka with status DOWN
+2020-06-19 16:24:08 [Thread-55] WARN  com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1592555048428, current=DOWN, previous=UP]
+2020-06-19 16:24:08 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001: registering service...
+2020-06-19 16:24:08 [Thread-55] INFO  com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2020-06-19 16:24:08 [Thread-55] INFO  com.netflix.discovery.DiscoveryClient - Unregistering ...
+2020-06-19 16:24:08 [Thread-55] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - deregister  status: 200
+2020-06-19 16:24:08 [DiscoveryClient-InstanceInfoReplicator-0] INFO  com.netflix.discovery.DiscoveryClient - DiscoveryClient_CURRICULUM-SERVER/localhost:curriculum-server:9001 - registration status: 204
+2020-06-19 16:24:08 [Thread-55] INFO  com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2020-06-19 16:24:08 [Thread-55] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2020-06-19 16:24:08 [Thread-55] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Waiting for workers to finish.
+2020-06-19 16:24:09 [Thread-55] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2020-06-19 16:24:09 [Thread-55] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2020-06-19 16:24:09 [Thread-55] INFO  o.s.context.support.DefaultLifecycleProcessor - Stopping beans in phase -2147482648
+2020-06-19 16:24:09 [Thread-55] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2020-06-19 16:24:09 [Thread-55] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="axedu.user" />
+        <module name="axedu.common.api" />
+        <module name="axedu.order.api" />
+        <module name="axedu.school.api" />
+        <module name="axedu.curriculum" />
+        <module name="axedu.user.api" />
+        <module name="axedu.curriculum.api" />
+        <module name="axedu.gateway" />
+        <module name="axedu.school" />
+        <module name="axedu.order" />
+        <module name="axedu.eureka" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="axedu.common.api" target="1.8" />
+      <module name="axedu.curriculum" target="1.8" />
+      <module name="axedu.curriculum.api" target="1.8" />
+      <module name="axedu.eureka" target="1.8" />
+      <module name="axedu.gateway" target="1.8" />
+      <module name="axedu.main" target="1.8" />
+      <module name="axedu.order" target="1.8" />
+      <module name="axedu.order.api" target="1.8" />
+      <module name="axedu.school" target="1.8" />
+      <module name="axedu.school.api" target="1.8" />
+      <module name="axedu.user" target="1.8" />
+      <module name="axedu.user.api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
