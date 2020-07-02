@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="axedu.user" />
-        <module name="axedu.common.api" />
-        <module name="axedu.order.api" />
-        <module name="axedu.school.api" />
-        <module name="axedu.curriculum" />
-        <module name="axedu.user.api" />
-        <module name="axedu.curriculum.api" />
         <module name="axedu.gateway" />
-        <module name="axedu.school" />
+        <module name="axedu.user.api" />
         <module name="axedu.order" />
+        <module name="axedu.curriculum" />
+        <module name="axedu.common.api" />
+        <module name="axedu.school.api" />
+        <module name="axedu.curriculum.api" />
+        <module name="axedu.order.api" />
+        <module name="axedu.school" />
         <module name="axedu.eureka" />
       </profile>
     </annotationProcessing>

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
+
 /**
  * @author 王淑婷
  * @Description TODO
@@ -21,4 +23,8 @@ public interface CurriculumFeignClient {
     //添加课程接口
     @PostMapping("/insertCurriculum")
     public int insertCurriculum(@RequestBody Curriculum curriculum);
+
+    //向订单模块提供特价课程的接口
+    @GetMapping("/findIsDiscount")
+    public List<Curriculum> findIsDiscount();
 }
